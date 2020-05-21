@@ -1,0 +1,10 @@
+const bookDB = require('../data-access')
+const makeGetBooks = require('./getBooks')
+const makePostBooks = require('./postBooks')
+const makePutBooks = require('./putBooks')
+const makeDeleteBooks = require('./deleteBooks')
+const showBook = makeGetBooks({bookDB})
+const submitBook = makePostBooks({bookDB})
+const updateBooks = makePutBooks({bookDB})
+const deleteBooks = makeDeleteBooks({bookDB})
+module.exports = {showBook, submitBook, updateBooks, deleteBooks}

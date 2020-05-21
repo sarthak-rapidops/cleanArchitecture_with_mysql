@@ -1,0 +1,10 @@
+const usecase = require('../use-case')
+const makeGetBooks = require('./getController')
+const makePostBook = require('./postController')
+const makePutBook = require('./putController')
+const makeDeleteBook = require('./deleteController')
+const book = makeGetBooks(usecase.showBook)
+const postBook = makePostBook(usecase.submitBook)
+const updatedBook = makePutBook(usecase.updateBooks)
+const deletedBook = makeDeleteBook(usecase.deleteBooks)
+module.exports = { book, postBook, updatedBook, deletedBook }
